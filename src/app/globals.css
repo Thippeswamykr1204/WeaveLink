@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #F7F2EA;
+  --color-cream-2: #F0E9DD;
+  --color-ink: #1C1712;
+  --color-terracotta: #C8703D;
+  --color-terracotta-dark: #A85A2E;
+  --color-line: #E7DDCC;
+  --color-muted: #8A7F6E;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-cream-2: var(--color-cream-2);
+  --color-ink: var(--color-ink);
+  --color-terracotta: var(--color-terracotta);
+  --color-terracotta-dark: var(--color-terracotta-dark);
+  --color-line: var(--color-line);
+  --color-muted: var(--color-muted);
+  --font-serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif);
+}
+
+::selection {
+  background: var(--color-terracotta);
+  color: white;
+}
+
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+
+button:not(:disabled),
+[role="button"]:not(:disabled),
+a,
+summary {
+  cursor: pointer;
+}
+
+button:disabled,
+[role="button"]:disabled {
+  cursor: not-allowed;
+}
